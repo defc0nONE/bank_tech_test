@@ -1,0 +1,23 @@
+{
+  "name": "bank_tech_test",
+  "version": "1.0.0",
+  "description": "## Discussion - Language used: JavaScript (written in ES6) - TDD using Mocha/Chai",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/defc0nONE/bank_tech_test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/defc0nONE/bank_tech_test/issues"
+  },
+  "homepage": "https://github.com/defc0nONE/bank_tech_test#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1"
+  }
+}
