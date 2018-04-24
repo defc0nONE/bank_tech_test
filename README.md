@@ -1,14 +1,19 @@
 # Bank Tech Test
 
+*"Isn't indirection some sort of spell in World of Warcraft?"*
+
+The bank where Warrior skill speed addicts named Hilde Lydstrom may not wish to open an account. The only concerns with separation at this bank is how much it can _truly_ be done.
+
 ## Discussion
 - Language used: JavaScript (written in ES6)
 - TDD using Mocha/Chai
 
 ## Requirements
-- Used within a console
+- Used within a console (in this case, a browser console)
 - User able to deposit/withdraw
-- Printing out statements (in the following format: date / amount / balance)
-- Data does *not* need to persist upon console close.
+- Printing out statements (in the following format: date / credit / debit / balance)
+    -  They should be printed in reverse chronological order (newest first)
+- Data does *not* need to persist upon console close
 
 ## Acceptance Criteria
 - User deposits **1000** on **10/1/2012**
