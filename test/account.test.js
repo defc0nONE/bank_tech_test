@@ -1,15 +1,27 @@
-let expect = require('chai').expect
-let Account = require('../src/account.js')
+let expect = require("chai").expect;
+let Account = require("../src/account.js");
 
-describe('Account class', function() {
-    it('should initialise with an empty bank account', function() {
-        testAccount = new Account()
-        expect(testAccount.balance).to.equal(0)
-    })
+describe("Account class", function() {
+  beforeEach(function() {
+    testAccount = new Account();
+  });
 
-    it('can deposit money', function() {
-        testAccount = new Account()
-        testAccount.deposit(100)
-        expect(testAccount.balance).to.equal(100)
-    })
-})
+  describe("Initialisation", function() {
+    it("should initialise with an empty bank account", function() {
+      expect(testAccount.balance).to.equal(0);
+    });
+  });
+
+  describe("Transactions", function() {
+    it("can deposit money", function() {
+      testAccount.deposit(100);
+      expect(testAccount.balance).to.equal(100);
+    });
+
+    it("can withdraw money", function() {
+      testAccount.deposit(100);
+      testAccount.withdraw(50);
+      expect(testAccount.balance).to.equal(50);
+    });
+  });
+});
