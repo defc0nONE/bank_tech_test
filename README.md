@@ -7,6 +7,7 @@ The bank where Warrior skill speed addicts named Hilde Lydstrom may not wish to 
 ## Discussion
 - Language used: JavaScript (written in ES6)
 - TDD using Mocha/Chai
+- Code coverage displayed with Istanblul
 
 ## Requirements
 - Used within a console (in this case, a browser console)
