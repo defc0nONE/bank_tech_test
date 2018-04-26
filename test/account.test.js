@@ -10,6 +10,10 @@ describe("Account class", function() {
     it("should initialise with an empty bank account", function() {
       expect(testAccount.balance).to.equal(0);
     });
+
+    it('should initialise with an empty array', function() {
+      expect(testAccount.transactionLog).to.deep.equal([])
+    })
   });
 
   describe("Transactions", function() {
