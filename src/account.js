@@ -1,15 +1,20 @@
 class Account {
   constructor() {
-    this.balance = 0;
-    this.transactionLog = [];
+    this._balance = 0;
+    this._transactionLog = [];
   }
 
-  deposit(amount) {
-    this.balance += amount;
-  }
-
-  withdraw(amount) {
-    this.balance -= amount;
+  performTransaction(transactionType, amount) {
+    if (transactionType === "deposit" && Number.isInteger(amount) === true) {
+      this._balance += amount;
+    } else if (
+      transactionType === "withdraw" &&
+      Number.isInteger(amount) === true
+    ) {
+      this._balance -= amount;
+    } else {
+      return "Invalid input, ensure transactionType is correct and that amount is an integer";
+    }
   }
 }
 

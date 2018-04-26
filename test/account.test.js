@@ -8,24 +8,38 @@ describe("Account class", function() {
 
   describe("Initialisation", function() {
     it("should initialise with an empty bank account", function() {
-      expect(testAccount.balance).to.equal(0);
+      expect(testAccount._balance).to.equal(0);
     });
 
-    it('should initialise with an empty array', function() {
-      expect(testAccount.transactionLog).to.deep.equal([])
-    })
+    it("should initialise with an empty array", function() {
+      expect(testAccount._transactionLog).to.deep.equal([]);
+    });
   });
 
   describe("Transactions", function() {
     it("can deposit money", function() {
-      testAccount.deposit(100);
-      expect(testAccount.balance).to.equal(100);
+      testAccount.performTransaction("deposit", 100);
+      expect(testAccount._balance).to.equal(100);
     });
 
     it("can withdraw money", function() {
-      testAccount.deposit(100);
-      testAccount.withdraw(50);
-      expect(testAccount.balance).to.equal(50);
+      testAccount.performTransaction("deposit", 100);
+      testAccount.performTransaction("withdraw", 50);
+      expect(testAccount._balance).to.equal(50);
+    });
+
+    it("returns an error message for invalid transactionType argument", function() {
+      let res = testAccount.performTransaction("donkposit", 150);
+      expect(res).to.equal(
+        "Invalid input, ensure transactionType is correct and that amount is an integer"
+      );
+    });
+
+    it("returns an error message for amount not being an integer", function() {
+      let res = testAccount.performTransaction("deposit", "all the dogs");
+      expect(res).to.equal(
+        "Invalid input, ensure transactionType is correct and that amount is an integer"
+      );
     });
   });
 });
