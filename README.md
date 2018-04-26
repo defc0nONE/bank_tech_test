@@ -21,3 +21,26 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 ```
+---
+## User Stories
+```
+As a user
+So I have somewhere to keep my salary safe
+I would like to deposit money into my account
+
+As a user
+So I can spend my rapidly accruing interest
+I would like to withdraw money from my account
+
+As a user
+So I can ensure my money is not being siphoned off
+I would like to see a history of my transactions
+
+As a user
+So I can appropriately pay my taxes for the year
+I would like to see the dates of my transaction history
+
+As a user
+So I can figure out when I last did my groceries
+I would like my transactions listed in reverse chronological order
+```
