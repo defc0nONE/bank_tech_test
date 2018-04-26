@@ -22,6 +22,12 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 ```
 ---
+## Current Personal Goals (likely to change throughout commits)
+ - Deliver MVP with functionality
+    - Currently defined as meeting the acceptance criteria
+ - Build clean code via TDD with DRY and SOLID principles
+ - Tackle in a language uncomfortable with
+ - Once MVP achieved, refactor where possible (as long as sensible)
 ## User Stories
 ```
 As a user
@@ -44,3 +50,5 @@ As a user
 So I can figure out when I last did my groceries
 I would like my transactions listed in reverse chronological order
 ```
+## Initial Diagram
+![Initial Diagram](/images/initial_diagram.png)
