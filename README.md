@@ -2,7 +2,8 @@
 
 ## Discussion
 - Language used: JavaScript (written in ES6)
-- TDD using Mocha/Chai
+- TDD using Mocha/Chai for assertions/expects, Chronomancer to mock dates
+- Istanbul to display test coverage
 
 ## Requirements
 - Used within a console
