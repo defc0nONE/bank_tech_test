@@ -1,5 +1,6 @@
 let expect = require("chai").expect;
 let Account = require("../src/account.js");
+const { freezeDate, resetDate } = require("chronomancer");
 
 describe("Account class", function() {
   beforeEach(function() {
@@ -40,6 +41,17 @@ describe("Account class", function() {
       expect(res).to.equal(
         "Invalid input, ensure transactionType is correct and that amount is an integer"
       );
+    });
+  });
+
+  describe("Date formatting", function() {
+    it("extracts the date and saves in a var as 31/01/2017 (dd/mm/yyyy format)", function() {
+      freezeDate("2017-01-31");
+      let unformattedDate = new Date();
+      let extractedDay = unformattedDate.getDate();
+      let extractedMonth = unformattedDate.getMonth();
+      let extractedYear = unformattedDate.getFullYear();
+      expect(formattedDate).to.equal("31/01/2017");
     });
   });
 });
