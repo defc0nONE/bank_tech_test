@@ -16,6 +16,22 @@ class Account {
       return "Invalid input, ensure transactionType is correct and that amount is an integer";
     }
   }
+
+  dateFormatter() {
+    let unformattedDate = new Date();
+    let day = unformattedDate.getDate();
+    let month = unformattedDate.getMonth() + 1;
+    let year = unformattedDate.getFullYear();
+    return [
+      addZeroIfLessThanTen(day),
+      addZeroIfLessThanTen(month),
+      extractedYear
+    ].join("/");
+  }
+
+  addZeroIfLessThanTen(number) {
+    return (number < 10 ? "0" : "") + number;
+  }
 }
 
 module.exports = Account;

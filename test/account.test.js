@@ -46,12 +46,9 @@ describe("Account class", function() {
 
   describe("Date formatting", function() {
     it("extracts the date and saves in a var as 31/01/2017 (dd/mm/yyyy format)", function() {
-      freezeDate("2017-01-31");
-      let unformattedDate = new Date();
-      let extractedDay = unformattedDate.getDate();
-      let extractedMonth = unformattedDate.getMonth();
-      let extractedYear = unformattedDate.getFullYear();
-      expect(formattedDate).to.equal("31/01/2017");
+      freezeDate("2017-01-01");
+      let res = testAccount.dateFormatter();
+      expect(res).to.equal("01/01/2017");
     });
   });
 });
